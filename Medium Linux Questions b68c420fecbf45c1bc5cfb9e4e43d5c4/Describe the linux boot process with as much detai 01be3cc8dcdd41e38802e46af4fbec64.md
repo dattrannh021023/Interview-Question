@@ -1,0 +1,13 @@
+# Describe the linux boot process with as much detail as possible, starting from when the system is powered on and ending when you get a prompt.
+
+Quá trình khởi động hệ thống Linux là một quy trình phức tạp, và dưới đây là mô tả chi tiết về quá trình này, bắt đầu từ khi hệ thống được bật nguồn cho đến khi bạn nhận được dấu nhắc (prompt) để đăng nhập:
+
+1. **BIOS/UEFI (Bootstrapping):** Khi bạn bật hệ thống, trình điều khiển cơ bản của hệ thống (BIOS hoặc UEFI) sẽ được nạp vào bộ nhớ. Trong giai đoạn này, hệ thống thực hiện kiểm tra phần cứng, kiểm tra và tải trình điều khiển thiết bị và xác định thiết bị khởi động (boot device) như ổ cứng hoặc USB.
+2. **Boot Loader:** Hệ thống chuyển quyền kiểm soát cho boot loader như GRUB (Grand Unified Bootloader). Boot loader nạp vào bộ nhớ hạt nhân Linux và môi trường initrd (initial RAM disk) hoặc initramfs (initial RAM file system). Initrd hoặc initramfs là một tệp hệ thống tạm thời chứa các trình điều khiển cần thiết để truy cập ổ cứng chính và hệ thống tệp để tiếp tục quá trình khởi động.
+3. **Hạt Nhân Linux (Kernel):** Bộ khởi động (boot loader) chọn và nạp hạt nhân Linux vào bộ nhớ. Hạt nhân là trung tâm của hệ thống, điều khiển tất cả các hoạt động của máy tính và quản lý tài nguyên phần cứng.
+4. **Init (hoặc systemd):** Sau khi hạt nhân đã được nạp, nó sẽ thực hiện chạy init hoặc systemd (tuỳ thuộc vào phiên bản hệ thống của bạn). Init (hoặc systemd) là tiến trình đầu tiên được khởi chạy và có ID tiến trình (PID) là 1. Nhiệm vụ của init (hoặc systemd) là khởi động và quản lý các dịch vụ và tiến trình của hệ thống.
+5. **Runlevel hoặc Target:** Init (hoặc systemd) sau đó sẽ đọc tập tin cấu hình để xác định runlevel (hoặc target) mà hệ thống sẽ khởi động vào. Runlevel/target xác định các dịch vụ và tiến trình nào sẽ được bắt đầu và dừng lại.
+6. **Dịch vụ Hệ Thống và Tiến Trình Ứng Dụng:** Init (hoặc systemd) khởi động các dịch vụ hệ thống như hệ thống quản lý gói (package manager), mạng, syslog, và nhiều dịch vụ khác. Nó cũng khởi động các tiến trình ứng dụng mà bạn đã cài đặt.
+7. **Hiển Thị Màn Hình Đăng Nhập:** Cuối cùng, sau khi tất cả các dịch vụ và tiến trình đã được khởi động, hệ thống hiển thị màn hình đăng nhập. Bạn sẽ thấy một dấu nhắc (prompt) để đăng nhập bằng tài khoản người dùng của bạn.
+
+Từ đây, bạn có thể đăng nhập vào hệ thống và bắt đầu làm việc trên môi trường dòng lệnh hoặc môi trường đồ họa, tùy thuộc vào cách bạn đã cấu hình hệ thống của mình.

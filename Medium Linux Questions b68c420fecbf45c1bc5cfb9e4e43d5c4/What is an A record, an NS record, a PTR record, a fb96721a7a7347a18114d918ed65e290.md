@@ -1,0 +1,11 @@
+# What is an A record, an NS record, a PTR record, a CNAME record, an MX record?
+
+Các loại bản ghi (record) DNS (Domain Name System) là các phần tử chính để quản lý và ánh xạ tên miền (domain names) thành địa chỉ IP và các thông tin liên quan. Dưới đây là mô tả của các loại bản ghi DNS quan trọng:
+
+1. **A Record (Address Record):** Bản ghi A là bản ghi DNS cơ bản và quan trọng nhất. Nó ánh xạ tên miền (domain name) thành địa chỉ IPv4. Ví dụ, nếu bạn có một bản ghi A cho tên miền "[example.com](http://example.com/)," nó sẽ ánh xạ "[example.com](http://example.com/)" thành một địa chỉ IP IPv4 như "192.168.1.1."
+2. **NS Record (Name Server Record):** Bản ghi NS xác định máy chủ tên (name server) chịu trách nhiệm quản lý một tên miền cụ thể. Điều này làm cho tên miền có thể trỏ đến máy chủ DNS chính quản lý nó. Ví dụ, nếu bạn có một bản ghi NS cho tên miền "[example.com](http://example.com/)," nó sẽ chỉ định máy chủ DNS quản lý "[example.com](http://example.com/)."
+3. **PTR Record (Pointer Record):** Bản ghi PTR thường được sử dụng để ánh xạ một địa chỉ IP IPv4 hoặc IPv6 thành một tên miền (thường dùng để tạo tên miền ngược). Ví dụ, bạn có thể sử dụng bản ghi PTR để ánh xạ địa chỉ IP "192.168.1.1" thành tên miền "[example.com](http://example.com/)."
+4. **CNAME Record (Canonical Name Record):** Bản ghi CNAME được sử dụng để tạo một bản ghi tên miền "alias" (điểm tới) đến một tên miền khác (tên miền "thật sự"). Thay vì thay đổi nhiều bản ghi A khi cần, bạn có thể sử dụng CNAME để trỏ tất cả các tên miền alias về tên miền "thật sự" duy nhất. Ví dụ, bạn có thể tạo một bản ghi CNAME để ánh xạ "[www.example.com](http://www.example.com/)" thành "[example.com](http://example.com/)."
+5. **MX Record (Mail Exchange Record):** Bản ghi MX xác định máy chủ email (mail server) được sử dụng để nhận email cho một tên miền cụ thể. MX record quyết định nơi mà email sẽ được gửi khi ai đó gửi email đến tên miền đó. MX record có mức độ ưu tiên để xác định máy chủ email ưu tiên cao hơn khi nhiều máy chủ email được liên kết với cùng một tên miền.
+
+Các bản ghi DNS khác nhau đóng vai trò quan trọng trong việc quản lý và định hình hệ thống DNS của tên miền và đảm bảo chức năng hoạt động chính xác.
